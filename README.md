@@ -9,6 +9,6 @@ a way to upload my notes in case anyone finds them useful.
 - Retyped example programs
 - Programs that are answers to exercises
 
-#### This repo won't include:
+#### This repo will not include:
 - Copies of resources (eg pdfs, downloaded html, docs)
 - Other projects in C
