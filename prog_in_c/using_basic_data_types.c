@@ -1,3 +1,8 @@
+/* This program is an excerpt from the book Programming in C.
+/  It creates several different variables of different data 
+/  types and then prints them to the terminal.
+*/
+
 #include <stdio.h>
 
 int main (void){
