@@ -139,7 +139,7 @@ printf("The best possible value is %lx.\n", coolNum);
 ```
 - You can also declare long long ints, which are guarenteed to be at least 64 bits:
 ```c
-long long int cursedSyntax = 17510;
+long long int cursedSyntax = 017510;
 printf("hehe i can make the calculator say %lli\n", cursedSyntax);
 //Note that you now have to use an extra l when displaying the number in printf()
 ```
