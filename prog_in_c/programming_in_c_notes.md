@@ -109,14 +109,92 @@ int num2 = 262639635; //These two values are equivalent
 - Use the same format strings as float uses to printf()
 ### On char (Single Character Type)
 - Character constants are declared by enclosing a character in single quotation marks:
-```c 'b'  '5'  '^' //These are all chars ```
+```c
+'b'  '5'  '^' //These are all chars 
+```
+- You can distinguish chars from Strings by looking at the type of qutation marks
+    - "a" is for a string
+    - 'a' is for a char
+- The format string for a char is '%c'
+### On \_Bool (Boolean Data Type)
+- The exact size of a bool isn't specified by C, but it always enough to store 0 or 1
+- 0 is used to represent false, and 1 to represent true
+- Any value aside from zero will be equivalent to 1 when assigning a bool 
+```c <stdbool.h>
+```
+ is a header file that streamlines using bools
+### Type Specifiers
+- adding long can add to the precision of a number, but there isn't a hard definition 
+for how many bits a long int is vs a normal int.
+- You can implicitly define a int as an int long by adding an l to the end of number:
+```c
+int val1 = 12345L;
+int val2 - 12345l;
+long int val3 = 12345; //These values are equivalent
+``` 
+- Displaying a long int through printf() requires adding the letter l to the format character
+```c
+long int coolNum  0xff00;
+printf("The best possible value is %lx.\n", coolNum);
+```
+- You can also declare long long ints, which are guarenteed to be at least 64 bits:
+```c
+long long int cursedSyntax = 17510;
+printf("hehe i can make the calculator say %lli\n", cursedSyntax);
+//Note that you now have to use an extra l when displaying the number in printf()
+```
+- You can also declare long floats or doubles
+```c
+double longDbl = 0.5e+4l;
+long float lFloat = 555555555.1;
+printf("sned me %Lf biteocin or i will hakc ur account!\n", longDbl);
+//Note the l in the format character is upper case rather than lower with the long int
+printf("Unfortunately, you are in violation of state stature number %Lf.\n", lFloat);
+//I am beginning to understand why C is a cursed language...
+```
+- In opposition to the long modifier is the short modifier
+- Short is guarenteed not to be smaller than 16 bits, but other than that has no set value
+- A way to conserve memory space
+- No direct way to declare a constant as a short int, but you can display short ints with printf()
+```c
+printf("This is a short constant: %hi.\n", varName);
+//For some god-forsaken reason you use h instead of s (maybe because %s is used already?)
+```
+- An int can be modified to be unsigned as well, declared by adding U to the value
+```c
+int val1 = 80085ul; //Note you can combine the long and unsigned modifier
+```
+- The compiler does some wierd shit to ints:
+```
+if val too big for int > convert to unsigned int
+elif val too small for unsigned int > convert to long int
+elif val doesn't fit in long int > convert to unsigned long int
+elif val doesn't fit in unsigned long int > convert to long long int
+else > convert to unsigned long long int
+```
+- Because god is a flat inverted circle, you can omit they keyword int when declaring any non-vanilla variant of int:
+```c
+unsigned value1 6666969;
+long value 2 8;
+unsigned long long var1 5;
+//I am filled with both despiar and fascination.
+```
+- For symmetry sake, you can also explicitly declare an int to be 'signed'
+### Working With Variables
+- C var names can have digits, letters (up or low), and underscores
+    - NOTE: A var name cannot begin with a number!
+    - NOTE: A var name cannot be a reserved word like int
+- Different capitalization results in distinct variables
+- Variable names longer than 63 characters are cut down to 63 characters
+    - Apparently in some cases only the first 31 characters are considered
+- Good variables names can act as self-documentation
+### Working with Arithmetic Expressions
+- +, -, /, * are all considered binary operators beacuse they take two values
+- Operators are evaluated in order highest precedence first
+- If operators have equal precedence, evaluate from left to right
 
 
-
-
-
-
-
+NOTE: LEFT OFF AT PG 55
 
 
 
