@@ -175,7 +175,7 @@ else > convert to unsigned long long int
 - Because god is a flat inverted circle, you can omit they keyword int when declaring any non-vanilla variant of int:
 ```c
 unsigned value1 6666969;
-long value 2 8;
+long value 28;
 unsigned long long var1 5;
 //I am filled with both despiar and fascination.
 ```
