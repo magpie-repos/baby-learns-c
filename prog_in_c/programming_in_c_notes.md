@@ -192,15 +192,19 @@ unsigned long long var1 5;
 - +, -, /, * are all considered binary operators beacuse they take two values
 - Operators are evaluated in order highest precedence first
 - If operators have equal precedence, evaluate from left to right
+### Integer Arithmetic & The Unary Minus Operator
+- In integer arithmetic, anything aftr the integer is discarded
+    - Built-in, always rounded down to nearest whole number
+- Floats let you use decimals but at the cost of efficiency. If you can use an int, use an int.
+- A *unary operator* is an operator that takes only a single value
+    - ex: putting a '-' before a value like with -5
+- The unary minus (-) operator has the highest precedence
+#### The Modulus Operator
+- The modulo operator gives the remainder of dividing a by b where a % b
+- % has the same precedence as * and /
+#### Integer and Floating Point Conversions
 
-
-NOTE: LEFT OFF AT PG 55
-
-
-
-
-
-
+        #NOTE: LEFT OFF AT PG 61
 
 
 
