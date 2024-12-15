@@ -203,8 +203,18 @@ unsigned long long var1 5;
 - The modulo operator gives the remainder of dividing a by b where a % b
 - % has the same precedence as * and /
 #### Integer and Floating Point Conversions
+- When float is converted ot int, you truncate the decimal
+- When two integers are divided, the result always has no decimal. Even if you convert it to a float
+- Floats are contageous; if one value is a float, everything in the expression is treated as a float
+#### Type Cast Operator
+- Type casting a var takes highest presedence aside from unary +/-
+- Type casting doesn't affect the original value, only the value in the expression
+### Combining Operations w/ Assignment: Assignment Operators
+- Ypu can combine and aritmetic op with = to modify a variable
+- like this: +=, /=, %=
+NOTE: C supports complex and imaginary types
 
-        #NOTE: LEFT OFF AT PG 61
+NOTE: Left off on pg 66
 
 
 
